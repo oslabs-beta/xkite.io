@@ -1,4 +1,12 @@
 body {
+  box-sizing: border-box;
+  background: #00b4ff;
+  color: #333;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
   #setupHeader {
     display: flex;
   }
@@ -14,7 +22,7 @@ body {
   }
 
   .btn.btn-export {
-    background: linear-gradient(to left, #9f9fed 50%, #736ced 50%) right;
+    background: #736ced;
     background-size: 200%;
     transition: 0.3s ease-out;
     width: 50%;
@@ -24,42 +32,12 @@ body {
     color: #f5f5f5;
 
     &:hover {
-      background-position: left;
+      background-color: #9f9fed;
     }
   }
 
-  #dangerSetup {
-    background: linear-gradient(to left, #9f9fed 50%, #736ced 50%) right;
-    background-size: 200%;
-    transition: 0.3s ease-out;
-    width: 50%;
-    border-color: #736ced;
-    color: #f5f5f5;
-
-    &:hover {
-      background-position: left;
-    }
-  }
-
-  .btn.btn-primary {
-    background: linear-gradient(to left, #9f9fed 50%, #736ced 50%) right;
-    background-size: 200%;
-    transition: 0.3s ease-out;
-    width: 100%;
-    border-color: #736ced;
-    color: #f5f5f5;
-
-    &:hover {
-      background-position: left;
-    }
-  }
-  .buttons {
-    display: flex;
-    padding-bottom: 5rem;
-    margin: auto 1rem;
-  }
   .btn.btn-secondary {
-    background: linear-gradient(to left, #9f9fed 50%, #736ced 50%) right;
+    background: #736ced;
     background-size: 200%;
     transition: 0.3s ease-out;
     width: 50%;
@@ -72,21 +50,7 @@ body {
     height: 60px;
 
     &:hover {
-      background-position: left;
-    }
-  }
-
-  #dangerDisplay {
-    background: linear-gradient(to left, #9f9fed 50%, #736ced 50%) right;
-    background-size: 200%;
-    transition: 0.3s ease-out;
-    width: 50%;
-    border-color: #736ced;
-    color: #f5f5f5;
-    height: 60px;
-
-    &:hover {
-      background-position: left;
+      background-color: #9f9fed;
     }
   }
 
@@ -155,7 +119,7 @@ body {
 
   .align-items-end.row {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .align-items-center.row {
@@ -164,28 +128,9 @@ body {
     justify-content: center;
   }
 
-  .metrics1 {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-  .metrics2 {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
   iframe {
     border-radius: 1rem;
   }
-
-  background: #00b4ff;
-  color: #333;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
 }
 
 // background: #2a2929;
@@ -369,5 +314,33 @@ body {
     color: white;
     margin-top: 1.8rem;
     margin-bottom: 4rem;
+  }
+}
+
+.developer {
+  background-color: #9f9fed;
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+  width: 11rem;
+  border: 3px solid white;
+
+  .profile-pic {
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    border: 3px solid white;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  h4 {
+    font-size: 0.8rem;
+  }
+
+  .links {
+    width: 8rem;
   }
 }
