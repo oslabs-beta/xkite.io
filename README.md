@@ -1,3 +1,1 @@
-## Getting Started
-
-## Learn More
+## xkite site

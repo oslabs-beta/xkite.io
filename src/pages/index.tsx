@@ -1,21 +1,29 @@
-import React from 'react';
-import Head from 'next/head';
-import Button from 'react-bootstrap/Button';
+import type { ReactElement } from 'react';
 
-export default function Home() {
+import { Box, Container, styled } from '@mui/material';
+import BaseLayout from 'src/layouts/BaseLayout';
+import MainContent from '@/components/MainContent';
+
+const OverviewWrapper = styled(Box)(
+  ({ theme }) => `
+    overflow: auto;
+    background: ${theme.palette.common.white};
+    flex: 1;
+    overflow-x: hidden;
+`
+);
+
+function Overview() {
   return (
-    <>
-      <Head>
-        <title>xkite</title>
-        <meta name='description' content='xkite landing page' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-      </Head>
-      <main className='landing-page'>
-        <h1>xkite</h1>
-        <Button variant='secondary' href='/configure'>
-          Configure a Cluster!
-        </Button>
-      </main>
-    </>
+    <OverviewWrapper>
+      <MainContent />
+      <Container maxWidth='lg' sx={{ mt: 8 }}></Container>
+    </OverviewWrapper>
   );
 }
+
+export default Overview;
+
+Overview.getLayout = function getLayout(page: ReactElement) {
+  return <BaseLayout>{page}</BaseLayout>;
+};
