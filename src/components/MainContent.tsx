@@ -10,6 +10,7 @@ import {
 import Link from 'src/components/Link';
 import Image from 'next/image';
 import Logo from '@/components/logo';
+import Developer from './Developer';
 
 const TypographyH1 = styled(Typography)(
   ({ theme }) => `
@@ -39,6 +40,24 @@ const LabelWrapper = styled(Box)(
     display: inline-block;
     font-size: ${theme.typography.pxToRem(11)};
     padding: ${theme.spacing(0.5)} ${theme.spacing(1.5)};
+`
+);
+
+const TeamWrapper = styled(Grid)(
+  ({ theme }) => `
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem 0 0 0;
+    padding: 0;
+    flex-wrap: wrap;    
+`
+);
+
+const TypographyH14 = styled(Typography)(
+  ({ theme }) => `
+    font-size: ${theme.typography.pxToRem(45)};
 `
 );
 
@@ -92,6 +111,41 @@ export default function MainContent() {
           </Button>
         </Grid>
       </Grid>
+      <TypographyH14 sx={{ mb: 2, mt: 20 }} variant='h1'>
+        Meet the Team!
+      </TypographyH14>
+      <TeamWrapper>
+        <Developer
+          name='John Hamlin'
+          img='/John.png'
+          github='johnhamlin'
+          linkedin='hamlinjohn'
+        />
+        <Developer
+          name='Issam Eljitan'
+          img='/team/Issam.png'
+          github='issam-eljitan'
+          linkedin='issam-eljitan'
+        />
+        <Developer
+          name='Irina Khafizova'
+          img='/team/Irina.png'
+          github='khafizka'
+          linkedin='irina-khafizova'
+        />
+        <Developer
+          name='Mark Krasner'
+          img='/team/Mark.png'
+          github='mzkrasner'
+          linkedin='krasnermark'
+        />
+        <Developer
+          name='Zahara Aviv'
+          img='/team/Zahara.png'
+          github='zahara-aviv'
+          linkedin='zahara'
+        />
+      </TeamWrapper>
     </Container>
   );
 }

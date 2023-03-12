@@ -1,6 +1,44 @@
-import React from 'react';
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  styled,
+} from '@mui/material';
 import Image from 'next/image';
-import Container from 'react-bootstrap/Container';
+import Link from 'next/link';
+
+// const useStyles = makeStyles({
+//   profilePic: {
+//     borderRadius: '50%',
+//   },
+//   links: {
+//     display: 'flex',
+//     justifyContent: 'space-evenly',
+//     width: '50%',
+//     marginTop: '1rem',
+//   },
+// });
+
+const DevWrapper = styled(Box)(
+  ({ theme }) => `
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    color: ${theme.palette.success.contrastText};
+    font-weight: bold;
+    font-size: ${theme.typography.pxToRem(11)};
+    margin: ${theme.spacing(0.5)} ${theme.spacing(1.5)};
+`
+);
+
+const Pics = styled(Image)(
+  ({ theme }) => `
+    border-radius: 50%;
+    box-shadow: 0 1px 8px black
+`
+);
 
 export default function Developer(props: {
   name: string;
@@ -10,38 +48,43 @@ export default function Developer(props: {
 }) {
   return (
     <>
-      <div className='d-flex flex-column align-items-center developer'>
-        <Image
+      <DevWrapper>
+        <Pics
           src={props.img}
           alt={`image of ${props.name}`}
-          width={200}
-          height={200}
-          className='profile-pic'
+          width={180}
+          height={180}
+          // className={classes.profilePic}
         />
-        <h3>{props.name}</h3>
-        <h4>Software Engineer</h4>
-        <Container className='d-flex justify-content-evenly links'>
-          <a href={`http://www.github.com/${props.github}`} target='_blank'>
+        <Typography variant='h3'>{props.name}</Typography>
+        <Typography variant='h6'>Software Engineer</Typography>
+        <Container>
+          <Link
+            href={`http://www.github.com/${props.github}`}
+            target='_blank'
+            rel='noreferrer'
+          >
             <Image
-              src='/github-mark.svg'
+              src='/navbar/github.svg'
               alt='github'
               width={24}
               height={24}
             ></Image>
-          </a>
-          <a
+          </Link>
+          <Link
             href={`http://www.linkedin.com/in/${props.linkedin}`}
             target='_blank'
+            rel='noreferrer'
           >
             <Image
-              src='/linkedin.svg'
+              src='/navbar/linkedin.svg'
               alt='linkedin'
               width={24}
               height={24}
             ></Image>
-          </a>
+          </Link>
         </Container>
-      </div>
+      </DevWrapper>
     </>
   );
 }
