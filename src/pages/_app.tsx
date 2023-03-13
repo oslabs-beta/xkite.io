@@ -60,7 +60,7 @@ function xKiteApp(props: xKiteAppProps) {
         </Head>
         <ThemeProvider>
           <LocalizationProvider dateAdapter={AdapterDateFns}>
-            <NavBar />
+            {/* <NavBar /> */}
             <CssBaseline />
             {getLayout(<Component {...pageProps} />)}
           </LocalizationProvider>

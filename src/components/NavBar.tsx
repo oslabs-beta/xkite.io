@@ -8,10 +8,11 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import Dropdown from '@/components/Dropdown';
+import React from 'react';
 
 const NavBarWrapper = styled(Card)(
   ({ theme }) => `
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100vw;
     display: flex;
@@ -19,7 +20,7 @@ const NavBarWrapper = styled(Card)(
     height: ${theme.spacing(8)};
     border: 1px solid ${theme.palette.divider};
     box-shadow: 0 1px 5px black;
-    z-index: 10;
+    z-index: 100;
   `
 );
 
@@ -34,10 +35,14 @@ const SocialsWrapper = styled(Box)(
   `
 );
 
-export default function NavBar() {
+export default function NavBar({ theTeam }: any) {
   const isSmallScreen = useMediaQuery((theme: any) =>
     theme.breakpoints.down('sm')
   );
+
+  const handleScrollToTeam = () => {
+    theTeam.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <NavBarWrapper>
@@ -54,16 +59,26 @@ export default function NavBar() {
               <>
                 <Box />
                 <Box />
-                <Dropdown />
+                <Dropdown theTeam={!theTeam} />
               </>
             ) : (
               <>
                 <Box>
-                  <>
-                    <Button href='/getstarted'>Get Started</Button>
-                    <Button href=''>Demo</Button>
-                    <Button href=''>Meet the Team</Button>
-                  </>
+                  {theTeam ? (
+                    <>
+                      <Button href='/getstarted'>Get Started</Button>
+                      <Button href='/demo'>Demo</Button>
+                      <Button onClick={handleScrollToTeam}>
+                        Meet the Team
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <Button href='/'>Home</Button>
+                      <Button href='/getstarted'>Get Started</Button>
+                      <Button href='/demo'>Demo</Button>
+                    </>
+                  )}
                 </Box>
                 <Box />
                 <Box />

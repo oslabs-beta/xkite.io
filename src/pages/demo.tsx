@@ -28,7 +28,7 @@ const Logo = styled(Image)(
 `
 );
 
-export default function GetStarted() {
+export default function Demo() {
   return (
     <>
       <NavBar />
@@ -46,7 +46,7 @@ export default function GetStarted() {
             <Logo alt='logo' height={400} width={400} src='/bigLogo.png' />
           </Box>
           <ComingSoon sx={{ mb: 2 }} variant='h1'>
-            &apos;Get Started&apos; Page <br /> Coming Soon!
+            &apos;Demo&apos; Page <br /> Coming Soon!
           </ComingSoon>
           {/* this container is to add some spacing below */}
         </Grid>
@@ -56,6 +56,6 @@ export default function GetStarted() {
   );
 }
 
-GetStarted.getLayout = function getLayout(page: ReactElement) {
+Demo.getLayout = function getLayout(page: ReactElement) {
   return <BaseLayout>{page}</BaseLayout>;
 };

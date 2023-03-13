@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function SimpleListMenu(): any {
+export default function SimpleListMenu({ theTeam }: any): any {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClickListItem = (event: React.MouseEvent<HTMLElement>) => {
@@ -26,15 +26,31 @@ export default function SimpleListMenu(): any {
         open={open}
         onClose={handleClose}
       >
-        <Link href='/getstarted'>
-          <MenuItem onClick={handleClose}>Get Started</MenuItem>
-        </Link>
-        <Link href='/demo'>
-          <MenuItem onClick={handleClose}>Demo</MenuItem>
-        </Link>
-        <Link href='/team'>
-          <MenuItem onClick={handleClose}>Meet the Team</MenuItem>
-        </Link>
+        {!theTeam ? (
+          <>
+            <Link href='/getstarted'>
+              <MenuItem onClick={handleClose}>Get Started</MenuItem>
+            </Link>
+            <Link href='/demo'>
+              <MenuItem onClick={handleClose}>Demo</MenuItem>
+            </Link>
+            <Link href='/team'>
+              <MenuItem onClick={handleClose}>Meet the Team</MenuItem>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link href='/'>
+              <MenuItem onClick={handleClose}>Home</MenuItem>
+            </Link>
+            <Link href='/getstarted'>
+              <MenuItem onClick={handleClose}>Get Started</MenuItem>
+            </Link>
+            <Link href='/demo'>
+              <MenuItem onClick={handleClose}>Demo</MenuItem>
+            </Link>
+          </>
+        )}
         <Button
           href='https://github.com/oslabs-beta/xkite'
           target='_blank'

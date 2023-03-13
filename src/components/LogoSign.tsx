@@ -5,9 +5,9 @@ import {
   TooltipProps,
   tooltipClasses,
   styled,
-  useTheme
+  useTheme,
 } from '@mui/material';
-import Link from 'src/components/Link';
+import Link from '@/components/Link';
 
 const LogoWrapper = styled(Link)(
   ({ theme }) => `
@@ -87,32 +87,29 @@ const TooltipWrapper = styled(({ className, ...props }: TooltipProps) => (
     fontWeight: 'bold',
     borderRadius: theme.general.borderRadiusSm,
     boxShadow:
-      '0 .2rem .8rem rgba(7,9,25,.18), 0 .08rem .15rem rgba(7,9,25,.15)'
+      '0 .2rem .8rem rgba(7,9,25,.18), 0 .08rem .15rem rgba(7,9,25,.15)',
   },
   [`& .${tooltipClasses.arrow}`]: {
-    color: theme.colors.alpha.trueWhite[100]
-  }
+    color: theme.colors.alpha.trueWhite[100],
+  },
 }));
 
 function Logo() {
   const theme = useTheme();
 
   return (
-    <TooltipWrapper
-      title="xKite: Kafka Integrated Testing Environment"
-      arrow
-    >
-      <LogoWrapper href="/">
+    <TooltipWrapper title='xKite: Kafka Integrated Testing Environment' arrow>
+      <LogoWrapper href='/'>
         <Badge
           sx={{
             '.MuiBadge-badge': {
               fontSize: theme.typography.pxToRem(11),
               right: -2,
-              top: 8
-            }
+              top: 8,
+            },
           }}
-          overlap="circular"
-          color="success"
+          overlap='circular'
+          color='success'
         >
           <LogoSignWrapper>
             <LogoSign>

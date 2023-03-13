@@ -9,18 +9,6 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
-// const useStyles = makeStyles({
-//   profilePic: {
-//     borderRadius: '50%',
-//   },
-//   links: {
-//     display: 'flex',
-//     justifyContent: 'space-evenly',
-//     width: '50%',
-//     marginTop: '1rem',
-//   },
-// });
-
 const DevWrapper = styled(Box)(
   ({ theme }) => `
     display: 'flex',
