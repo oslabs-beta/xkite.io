@@ -82,7 +82,7 @@ export default function MainContent() {
             </TypographyH2>
             <Button
               component={Link}
-              href='/configuration'
+              href='/getstarted'
               size='large'
               variant='contained'
             >

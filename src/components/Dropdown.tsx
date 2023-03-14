@@ -11,7 +11,17 @@ export default function SimpleListMenu({ theTeam }: any): any {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = (e: any) => {
+    console.log('theTeam', theTeam);
+    if (e.target.outerText === 'Meet the Team') {
+      // console.log('here');
+      // theTeam.current.scrollIntoView({ behavior: 'smooth' });
+      window.parent.scrollTo({
+        top: 1150,
+        behavior: 'smooth',
+      });
+    }
+
     setAnchorEl(null);
   };
 
@@ -26,7 +36,7 @@ export default function SimpleListMenu({ theTeam }: any): any {
         open={open}
         onClose={handleClose}
       >
-        {!theTeam ? (
+        {theTeam ? (
           <>
             <Link href='/getstarted'>
               <MenuItem onClick={handleClose}>Get Started</MenuItem>
@@ -34,9 +44,9 @@ export default function SimpleListMenu({ theTeam }: any): any {
             <Link href='/demo'>
               <MenuItem onClick={handleClose}>Demo</MenuItem>
             </Link>
-            <Link href='/team'>
+            <>
               <MenuItem onClick={handleClose}>Meet the Team</MenuItem>
-            </Link>
+            </>
           </>
         ) : (
           <>

@@ -47,7 +47,7 @@ export default function Developer(props: {
         <Typography variant='h3'>{props.name}</Typography>
         <Typography variant='h6'>Software Engineer</Typography>
         <Container>
-          <Link
+          <Button
             href={`http://www.github.com/${props.github}`}
             target='_blank'
             rel='noreferrer'
@@ -55,11 +55,11 @@ export default function Developer(props: {
             <Image
               src='/navbar/github.svg'
               alt='github'
-              width={24}
-              height={24}
+              width={32}
+              height={32}
             ></Image>
-          </Link>
-          <Link
+          </Button>
+          <Button
             href={`http://www.linkedin.com/in/${props.linkedin}`}
             target='_blank'
             rel='noreferrer'
@@ -67,10 +67,10 @@ export default function Developer(props: {
             <Image
               src='/navbar/linkedin.svg'
               alt='linkedin'
-              width={24}
-              height={24}
+              width={32}
+              height={32}
             ></Image>
-          </Link>
+          </Button>
         </Container>
       </DevWrapper>
     </>

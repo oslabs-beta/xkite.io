@@ -59,7 +59,7 @@ export default function NavBar({ theTeam }: any) {
               <>
                 <Box />
                 <Box />
-                <Dropdown theTeam={!theTeam} />
+                <Dropdown theTeam={theTeam} />
               </>
             ) : (
               <>
@@ -96,7 +96,7 @@ export default function NavBar({ theTeam }: any) {
                     ></Image>
                   </a>
                   <a
-                    href='https://www.npmjs.com/package/xkiteio'
+                    href='https://www.npmjs.com/~xkite'
                     target='_blank'
                     rel='noreferrer'
                   >
