@@ -45,7 +45,7 @@ export default function Team(props: any) {
         name='Zahara Aviv'
         img='/team/Zahara.png'
         github='zahara-aviv'
-        linkedin='zahara'
+        linkedin='zahara-aviv'
       />
     </TeamWrapper>
   );
