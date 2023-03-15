@@ -35,29 +35,29 @@ export default function SimpleListMenu({ theTeam }: any): any {
         onClose={handleClose}
       >
         {theTeam ? (
-          <>
+          <div>
             <Link href='/getstarted'>
               <MenuItem onClick={handleClose}>Get Started</MenuItem>
             </Link>
-            <Link href='/demo'>
+            {/* <Link href='/demo'>
               <MenuItem onClick={handleClose}>Demo</MenuItem>
-            </Link>
-            <>
+            </Link> */}
+            <div>
               <MenuItem onClick={handleClose}>Meet the Team</MenuItem>
-            </>
-          </>
+            </div>
+          </div>
         ) : (
-          <>
+          <div>
             <Link href='/'>
               <MenuItem onClick={handleClose}>Home</MenuItem>
             </Link>
             <Link href='/getstarted'>
               <MenuItem onClick={handleClose}>Get Started</MenuItem>
             </Link>
-            <Link href='/demo'>
+            {/* <Link href='/demo'>
               <MenuItem onClick={handleClose}>Demo</MenuItem>
-            </Link>
-          </>
+            </Link> */}
+          </div>
         )}
         <Button
           href='https://github.com/oslabs-beta/xkite'

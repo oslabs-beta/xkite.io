@@ -88,7 +88,7 @@ export default function MainContent() {
             >
               Get Started
             </Button>
-            <Button
+            {/* <Button
               sx={{ ml: 2 }}
               component={Link}
               target='_blank'
@@ -97,7 +97,7 @@ export default function MainContent() {
               variant='text'
             >
               Contribute Today
-            </Button>
+            </Button> */}
           </Grid>
         </Grid>
         <TypographyH14 sx={{ mb: 2, mt: 20 }} variant='h1' ref={team}>

@@ -4,7 +4,7 @@ import {
   Card,
   Container,
   styled,
-  useMediaQuery,
+  useMediaQuery
 } from '@mui/material';
 import Image from 'next/image';
 import Dropdown from '@/components/Dropdown';
@@ -47,7 +47,7 @@ export default function NavBar({ theTeam }: any) {
     <NavBarWrapper>
       <Container maxWidth='lg'>
         <Box display='flex' alignItems='center'>
-          <Image src='/navbar/logo.png' height={40} width={50} alt='logo' />
+          <Image src='/navbar/logo.png' height={40} width={50} alt='logo' onClick={() => window.location.href = '/'}/>
           <Box
             display='flex'
             alignItems='center'
@@ -66,7 +66,7 @@ export default function NavBar({ theTeam }: any) {
                   {theTeam ? (
                     <>
                       <Button href='/getstarted'>Get Started</Button>
-                      <Button href='/demo'>Demo</Button>
+                      {/* <Button href='/demo'>Demo</Button> */}
                       <Button onClick={handleScrollToTeam}>
                         Meet the Team
                       </Button>
@@ -75,7 +75,7 @@ export default function NavBar({ theTeam }: any) {
                     <>
                       <Button href='/'>Home</Button>
                       <Button href='/getstarted'>Get Started</Button>
-                      <Button href='/demo'>Demo</Button>
+                      {/* <Button href='/demo'>Demo</Button> */}
                     </>
                   )}
                 </Box>
