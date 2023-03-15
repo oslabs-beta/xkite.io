@@ -66,6 +66,8 @@ export default function xkite() {
   const classes = useStyles();
 
   return (
+    <>
+    <Box className={classes.root}></Box>
     <Panel value='xkite' className={classes.leftText} >
       <Box className={classes.root}>
       <Step >1. Clone the repository to your device</Step>
@@ -214,6 +216,6 @@ export default function xkite() {
       </Box>
       <Image src={disconnect} alt="disconnect" />
     </Panel>
-    
+    </>
   );
 }

@@ -10,7 +10,7 @@ import {
   Tab
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
-
+import xkiteCli from 'public/cli-xkite.gif'
 import { CopyBlock, atomOneDark } from 'react-code-blocks';
 
 
@@ -61,47 +61,62 @@ export default function cli() {
   const code = 'for (let i = 0; i < 10; i++) { console.log(i); }';
   return (
     <>
+    <Box className={classes.root}></Box>
     <Panel value='cli' className={classes.leftText} >
-      <Box className={classes.root}>
-      <Step >1. Clone the repository to your device</Step>
+    <Box className={classes.root}>
+      <Description >The xkite-cli utility provides an easy to use Command Line Interface (CLI) to interact with the xkite-core library. 
+                    It’s a simple alternative to the full xkite GUI web application meant to provide users with the ability to automate 
+                    their testing using scripts. It also provides the ability to configure a custom docker ecosystem using command line 
+                    inputs or a config.json file, deploy, pause/ unpause, shutdown, and remove containers and volumes.</Description>
       </Box>
       <Box className={classes.root}>
-      <Description >a. If using NPX, simply execute the following in your terminal and follow the prompts:</Description>
-      </Box>
-      <Code className={classes.root}>
-        <CopyBlock
-          text={`npx @xkiteio/create-xkite my-xkite`}
-          language='javascript'
-          showLineNumbers={true}
-          wrapLines
-          codeBlock
-          theme={atomOneDark}
-        />
-      </Code>
-      <Box className={classes.root}>
-      <Description >Upon completion, your dependencies will already be installed. Simply follow the instructions and in the terminal which will include the following:</Description>
-      </Box>
-      <Code className={classes.root}>
-        <CopyBlock
-          text={'cd my-xkite'}
-          language='javascript'
-          showLineNumbers={true}
-          wrapLines
-          codeBlock
-          theme={atomOneDark}
-        />
-      </Code>
-      <Code className={classes.root}>
-        <CopyBlock
-          text={'npm run dev'}
-          language='javascript'
-          showLineNumbers={true}
-          wrapLines
-          codeBlock
-          theme={atomOneDark}
-        />
-      </Code>
+      <Description >Similar to the xkite GUI web application, xkite-cli allows users to download their configuration (package.zip) 
+                    containing their docker-compose.yml file and dependencies in order to deploy their ecosystem on a cloud instance/remote 
+                    server by simply running docker-compose up. In addition to all this great functionality xkite-cli can act as a remote client 
+                    to interface with the xkite GUI web application server.</Description>
       
+      </Box>
+      <Box className={classes.root}>
+      <Description >The user can perform all the aforementioned functions provided remotely on the xkite server by providing the URL as a 
+                    configuration input. xkite-cli is just another tool in the xkite library to allow the user to ultimate control over their 
+                    Kafka ecosystem. xkite-cli also enables the user to have a more granular control over which docker images they choose to 
+                    deploy (something that is not configurable currently with the web GUI version).</Description>
+      
+      </Box>
+      <Box className={classes.root}>
+      <Step >1. Install the xkite-cli utility globally</Step>
+      </Box>
+      <Box className={classes.root}>
+      <Description >a. Run the following command in your terminal to install the xkite-cli utility globally:</Description>
+      </Box>
+      <Code className={classes.root}>
+        <CopyBlock
+          text={`npx create-xkite-cli`}
+          language='javascript'
+          showLineNumbers={true}
+          wrapLines
+          codeBlock
+          theme={atomOneDark}
+        />
+      </Code>
+      <Box className={classes.root}>
+      <Description >After installation is completed, you can view and test the different xkite-cli commands by running:</Description>
+      </Box>
+      <Code className={classes.root}>
+        <CopyBlock
+          text={`xkite-cli`}
+          language='javascript'
+          showLineNumbers={true}
+          wrapLines
+          codeBlock
+          theme={atomOneDark}
+        />
+      </Code>
+      <Image src={xkiteCli} alt="xkite-cli" />
+      <Box className={classes.root}>
+      <Description >Please refer to the README for detailed instructions or refer to the xkite-cli –help command to see all available options.</Description>
+      
+      </Box>
     </Panel>
     </>
   );
