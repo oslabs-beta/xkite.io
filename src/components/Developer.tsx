@@ -7,7 +7,6 @@ import {
   styled,
 } from '@mui/material';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const DevWrapper = styled(Box)(
   ({ theme }) => `

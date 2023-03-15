@@ -1,5 +1,4 @@
 import Developer from './Developer';
-import { useRef } from 'react';
 import { Grid, styled } from '@mui/material';
 
 const TeamWrapper = styled(Grid)(
