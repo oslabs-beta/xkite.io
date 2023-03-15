@@ -1,15 +1,7 @@
 import type { ReactElement } from 'react';
 import React from 'react';
-import Image from 'next/image';
 
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  styled,
-  Tab,
-} from '@mui/material';
+import { Box, Container, Grid, Typography, styled, Tab } from '@mui/material';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import BaseLayout from '@/layouts/BaseLayout';
@@ -29,8 +21,8 @@ const ComingSoon = styled(Typography)(
 const useStyles = makeStyles({
   root: {
     marginTop: 20,
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 });
 
 const Tabs = styled(TabList)(
@@ -39,6 +31,21 @@ const Tabs = styled(TabList)(
     display: flex;
     align-items: space-between;
     justify-content: space-between;
+    @media (max-width: 600px) {
+      .MuiTab-root {
+        font-size: small;
+      }
+    }
+    @media (min-width: 601px) and (max-width: 960px) {
+      .MuiTab-root {
+        font-size: medium;
+      }
+    }
+    @media (min-width: 961px) {
+      .MuiTab-root {
+        font-size: large;
+      }
+    }
 `
 );
 export default function GetStarted() {
@@ -64,23 +71,58 @@ export default function GetStarted() {
           <ComingSoon sx={{ mb: 2 }} variant='h1'>
             Get Started
           </ComingSoon>
-          <Box className={classes.root}></Box>
-          <Box sx={{ width: '100%' }}>
-            <TabContext value={value}>
-              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs onChange={handleChange} >
-                  <Tab label='xkite' value='xkite' sx={{ width: '10em', textTransform: 'lowercase', fontSize: '1.5em'  }} />
-                  <Tab label='xkite-core' value='core' sx={{ width: '10em', textTransform: 'lowercase', fontSize: '1.5em'  }} />
-                  <Tab label='xkite-cli' value='cli' sx={{ width: '10em', textTransform: 'lowercase', fontSize: '1.5em'  }} />
-                  <Tab label='Contributions' value='contributions' sx={{ width: '10em', fontSize: '1.5em'  }} />
-                </Tabs>
-              </Box>
-              <Xkite />
-              <Core />
-              <CLI />
-              <Contributions />
-            </TabContext>
-          </Box>
+          <Grid item xs={12}>
+            <Box className={classes.root}></Box>
+            </Grid>
+            <Grid item xs={12}>
+            <Box sx={{ width: '100%' }}>
+              <TabContext value={value}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                  <Tabs onChange={handleChange} sx={{ width: '100%', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+                    <Tab
+                      label='xkite'
+                      value='xkite'
+                      sx={{
+                        width: '25%',
+                        flexWrap: 'wrap',
+                        textTransform: 'lowercase',
+                        fontSize: 'medium',
+                      }}
+                    />
+                    <Tab
+                      label='xkite-core'
+                      value='core'
+                      sx={{
+                        width: '25%',
+                        flexWrap: 'wrap',
+                        textTransform: 'lowercase',
+                        fontSize: 'medium',
+                      }}
+                    />
+                    <Tab
+                      label='xkite-cli'
+                      value='cli'
+                      sx={{
+                        width: '20%',
+                        flexWrap: 'wrap',
+                        textTransform: 'lowercase',
+                        fontSize: 'small',
+                      }}
+                    />
+                    <Tab
+                      label='Contributions'
+                      value='contributions'
+                      sx={{ width: '35%', flexWrap: 'wrap', fontSize: 'small' }}
+                    />
+                  </Tabs>
+                </Box>
+                <Xkite />
+                <Core />
+                <CLI />
+                <Contributions />
+              </TabContext>
+            </Box>
+            </Grid>
         </Grid>
         <Container maxWidth='lg' sx={{ mt: 8 }}></Container>
       </Container>
