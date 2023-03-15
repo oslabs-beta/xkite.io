@@ -12,7 +12,6 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import createEmotionCache from 'src/createEmotionCache';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import NavBar from '@/components/NavBar';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -37,7 +36,7 @@ function xKiteApp(props: xKiteAppProps) {
     <>
       <CacheProvider value={emotionCache}>
         <Head>
-          <title>xKite</title>
+          <title>xkite: Kafka Prototyping, Testing, and Monitoring Suite</title>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/navbar/logo.png' />
           <link rel='xkite-logo' sizes='180x180' href='/navbar/logo.png' />

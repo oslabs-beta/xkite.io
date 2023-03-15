@@ -1,5 +1,4 @@
 import type { ReactElement } from 'react';
-
 import { Box, Container, styled } from '@mui/material';
 import BaseLayout from 'src/layouts/BaseLayout';
 import MainContent from '@/components/MainContent';

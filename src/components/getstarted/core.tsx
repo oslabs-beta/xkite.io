@@ -2,12 +2,8 @@ import TabPanel from '@mui/lab/TabPanel';
 import Image from 'next/image'
 import {
   Box,
-  Button,
-  Container,
-  Grid,
   Typography,
-  styled,
-  Tab
+  styled
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import xkiteCore from 'public/xkite-core.gif'
@@ -16,8 +12,8 @@ import { CopyBlock, atomOneDark } from 'react-code-blocks';
 
 const useStyles = makeStyles({
   root: {
-    marginTop: 20,
-    marginBottom: 20
+    marginTop: '1.5em',
+    marginBottom: '1.5em'
   },
   leftText: {
     textAlign: "left"
@@ -29,13 +25,13 @@ const useStyles = makeStyles({
 
 const Step = styled(Typography)(
   ({ theme }) => `
-    font-size: ${theme.typography.pxToRem(35)};
+    font-size: xx-large;
 `
 );
 
 const Description = styled(Typography)(
   ({ theme }) => `
-    font-size: ${theme.typography.pxToRem(20)};
+    font-size: large;
 `
 );
 
@@ -58,11 +54,35 @@ const Code = styled(Box)(
 export default function core() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const classes = useStyles();
-  const code = 'for (let i = 0; i < 10; i++) { console.log(i); }';
   return (
     <>
-    <Box className={classes.root}></Box>
     <Panel value='core' className={classes.leftText} >
+    <Box className={classes.root}></Box>
+    <Box className={classes.root}>
+      <Description >The guide below uses the following repository: </Description>
+      </Box>
+      <Code className={classes.root}>
+        <CopyBlock
+          text={`https://github.com/oslabs-beta/xkite-core`}
+          language='javascript'
+          showLineNumbers={true}
+          wrapLines
+          codeBlock
+          theme={atomOneDark}
+        />
+      </Code>
+      <Box className={classes.root}>
+      <Step >System Requirements: </Step>
+      </Box>
+      <Box className={classes.root}>
+      <Description >- Latest stable versions of <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Node.js and NPM</a> installed</Description>
+      </Box>
+      <Box className={classes.root}>
+      <Description >- Latest stable versions of <a href="https://docs.docker.com/compose/install/">docker-compose</a> installed</Description>
+      </Box>
+      <Box className={classes.root}>
+      <Step >Overview: </Step>
+      </Box>
     <Box className={classes.root}>
       <Description >The xkite-core library is, as the name suggests, the core library for xkite. It provides the underpinning functionality 
                     for configuring a YAML file, managing docker containers (configure, run, pause, and shutdown), interfacing with remote 
@@ -72,7 +92,6 @@ export default function core() {
       <Description >The xkite-core library is available as an npm package to enable developers to integrate the tool into their existing codebase 
                     or kickstart their application using Kafka. Two practical use cases for using xkite-core are already shown above with the xkite 
                     web GUI and the xkite-cli applications. </Description>
-      
       </Box>
       <Box className={classes.root}>
       <Step >1. Install xkite-core into your existing codebase using NPM</Step>

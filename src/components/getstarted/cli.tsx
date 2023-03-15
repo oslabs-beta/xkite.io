@@ -2,12 +2,8 @@ import TabPanel from '@mui/lab/TabPanel';
 import Image from 'next/image'
 import {
   Box,
-  Button,
-  Container,
-  Grid,
   Typography,
-  styled,
-  Tab
+  styled
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import xkiteCli from 'public/cli-xkite.gif'
@@ -16,8 +12,8 @@ import { CopyBlock, atomOneDark } from 'react-code-blocks';
 
 const useStyles = makeStyles({
   root: {
-    marginTop: 20,
-    marginBottom: 20
+    marginTop: '1.5em',
+    marginBottom: '1.5em'
   },
   leftText: {
     textAlign: "left"
@@ -29,13 +25,13 @@ const useStyles = makeStyles({
 
 const Step = styled(Typography)(
   ({ theme }) => `
-    font-size: ${theme.typography.pxToRem(35)};
+    font-size: xx-large;
 `
 );
 
 const Description = styled(Typography)(
   ({ theme }) => `
-    font-size: ${theme.typography.pxToRem(20)};
+    font-size: large;
 `
 );
 
@@ -58,11 +54,35 @@ const Code = styled(Box)(
 export default function cli() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const classes = useStyles();
-  const code = 'for (let i = 0; i < 10; i++) { console.log(i); }';
   return (
     <>
-    <Box className={classes.root}></Box>
     <Panel value='cli' className={classes.leftText} >
+    <Box className={classes.root}></Box>
+    <Box className={classes.root}>
+      <Description >The guide below uses the following repository: </Description>
+      </Box>
+      <Code className={classes.root}>
+        <CopyBlock
+          text={`https://github.com/oslabs-beta/xkite-cli`}
+          language='javascript'
+          showLineNumbers={true}
+          wrapLines
+          codeBlock
+          theme={atomOneDark}
+        />
+      </Code>
+      <Box className={classes.root}>
+      <Step >System Requirements: </Step>
+      </Box>
+      <Box className={classes.root}>
+      <Description >- Latest stable versions of <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Node.js and NPM</a> installed</Description>
+      </Box>
+      <Box className={classes.root}>
+      <Description >- Latest stable versions of <a href="https://docs.docker.com/compose/install/">docker-compose</a> installed</Description>
+      </Box>
+      <Box className={classes.root}>
+      <Step >Overview: </Step>
+      </Box>
     <Box className={classes.root}>
       <Description >The xkite-cli utility provides an easy to use Command Line Interface (CLI) to interact with the xkite-core library. 
                     It’s a simple alternative to the full xkite GUI web application meant to provide users with the ability to automate 
@@ -115,7 +135,6 @@ export default function cli() {
       <Image src={xkiteCli} alt="xkite-cli" />
       <Box className={classes.root}>
       <Description >Please refer to the README for detailed instructions or refer to the xkite-cli –help command to see all available options.</Description>
-      
       </Box>
     </Panel>
     </>

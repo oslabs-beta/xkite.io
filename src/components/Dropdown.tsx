@@ -14,8 +14,6 @@ export default function SimpleListMenu({ theTeam }: any): any {
   const handleClose = (e: any) => {
     console.log('theTeam', theTeam);
     if (e.target.outerText === 'Meet the Team') {
-      // console.log('here');
-      // theTeam.current.scrollIntoView({ behavior: 'smooth' });
       window.parent.scrollTo({
         top: 1150,
         behavior: 'smooth',

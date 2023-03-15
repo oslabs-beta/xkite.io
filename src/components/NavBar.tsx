@@ -8,7 +8,6 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import Dropdown from '@/components/Dropdown';
-import React from 'react';
 
 const NavBarWrapper = styled(Card)(
   ({ theme }) => `

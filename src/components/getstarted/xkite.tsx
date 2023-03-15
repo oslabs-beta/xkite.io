@@ -2,12 +2,8 @@ import TabPanel from '@mui/lab/TabPanel';
 import Image from 'next/image'
 import {
   Box,
-  Button,
-  Container,
-  Grid,
   Typography,
-  styled,
-  Tab
+  styled
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import config from 'public/home-configuration.gif'
@@ -20,8 +16,8 @@ import { CopyBlock, atomOneDark } from 'react-code-blocks';
 
 const useStyles = makeStyles({
   root: {
-    marginTop: 20,
-    marginBottom: 20
+    marginTop: '1.5em',
+    marginBottom: '1.5em'
   },
   leftText: {
     textAlign: "left"
@@ -34,13 +30,13 @@ const useStyles = makeStyles({
 
 const Step = styled(Typography)(
   ({ theme }) => `
-    font-size: ${theme.typography.pxToRem(35)};
+    font-size: xx-large;
 `
 );
 
 const Description = styled(Typography)(
   ({ theme }) => `
-    font-size: ${theme.typography.pxToRem(20)};
+    font-size: large;
 `
 );
 
@@ -67,8 +63,38 @@ export default function xkite() {
 
   return (
     <>
-    <Box className={classes.root}></Box>
     <Panel value='xkite' className={classes.leftText} >
+    <Box className={classes.root}></Box>
+    <Box className={classes.root}>
+      <Description >The guide below uses the following repository: </Description>
+      </Box>
+      <Code className={classes.root}>
+        <CopyBlock
+          text={`https://github.com/oslabs-beta/xkite`}
+          language='javascript'
+          showLineNumbers={true}
+          wrapLines
+          codeBlock
+          theme={atomOneDark}
+        />
+      </Code>
+      <Box className={classes.root}>
+      <Step >System Requirements: </Step>
+      </Box>
+      <Box className={classes.root}>
+      <Description >- Latest stable versions of <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Node.js and NPM</a> installed</Description>
+      </Box>
+      <Box className={classes.root}>
+      <Description >- Latest stable versions of <a href="https://docs.docker.com/compose/install/">docker-compose</a> installed</Description>
+      </Box>
+      <Box className={classes.root}>
+      <Step >Overview: </Step>
+      </Box>
+      <Box className={classes.root}>
+      <Description >This guide explains how to use our core xkite library, complete with a visual interface that will run in the user&apos;s browser on a
+        localhost port. If you would rather install xkite into an existing project, or use your command line without the visual interface, please refer to 
+        the adjacent tabs.</Description>
+      </Box>
       <Box className={classes.root}>
       <Step >1. Clone the repository to your device</Step>
       </Box>
