@@ -10,6 +10,7 @@ import Xkite from '@/components/getstarted/xkite';
 import Core from '@/components/getstarted/core';
 import CLI from '@/components/getstarted/cli';
 import Contributions from '@/components/getstarted/contribution';
+import Definitions from '@/components/getstarted/definitions';
 import makeStyles from '@mui/styles/makeStyles';
 
 const ComingSoon = styled(Typography)(
@@ -83,20 +84,20 @@ export default function GetStarted() {
                       label='xkite'
                       value='xkite'
                       sx={{
-                        width: '25%',
+                        width: '20%',
                         flexWrap: 'wrap',
                         textTransform: 'lowercase',
-                        fontSize: 'medium',
+                        fontSize: 'small',
                       }}
                     />
                     <Tab
                       label='xkite-core'
                       value='core'
                       sx={{
-                        width: '25%',
+                        width: '20%',
                         flexWrap: 'wrap',
                         textTransform: 'lowercase',
-                        fontSize: 'medium',
+                        fontSize: 'small',
                       }}
                     />
                     <Tab
@@ -112,7 +113,12 @@ export default function GetStarted() {
                     <Tab
                       label='Contributions'
                       value='contributions'
-                      sx={{ width: '35%', flexWrap: 'wrap', fontSize: 'small' }}
+                      sx={{ width: '20%', flexWrap: 'wrap', fontSize: 'small' }}
+                    />
+                    <Tab
+                      label='Definitions'
+                      value='definitions'
+                      sx={{ width: '20%', flexWrap: 'wrap', fontSize: 'small' }}
                     />
                   </Tabs>
                 </Box>
@@ -120,6 +126,7 @@ export default function GetStarted() {
                 <Core />
                 <CLI />
                 <Contributions />
+                <Definitions />
               </TabContext>
             </Box>
             </Grid>

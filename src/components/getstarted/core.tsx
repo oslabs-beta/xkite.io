@@ -81,6 +81,9 @@ export default function core() {
       <Description >- Latest stable versions of <a href="https://docs.docker.com/compose/install/">docker-compose</a> installed</Description>
       </Box>
       <Box className={classes.root}>
+      <Description >- <strong>Note: </strong>You will need Docker daemon running before deploying an xkite configuration.</Description>
+      </Box>
+      <Box className={classes.root}>
       <Step >Overview: </Step>
       </Box>
     <Box className={classes.root}>
