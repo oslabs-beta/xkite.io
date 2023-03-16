@@ -4,7 +4,6 @@ import { Box, Typography, styled } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import xkiteCore from 'public/xkite-core.gif';
 import { CopyBlock, atomOneDark } from 'react-code-blocks';
-import Link from '@/components/Link';
 
 const useStyles = makeStyles({
   root: {
@@ -70,12 +69,7 @@ export default function core() {
           />
         </Code>
         <Box className={classes.root}>
-          <Description>
-            README:{' '}
-            <Link href='https://github.com/oslabs-beta/xkite-core/blob/main/README.md'>
-              Github
-            </Link>
-          </Description>
+        <Description >README: <a href="https://github.com/oslabs-beta/xkite-core/blob/main/README.md">Github</a></Description>
         </Box>
         <Box className={classes.root}>
           <Step>System Requirements: </Step>
@@ -83,18 +77,18 @@ export default function core() {
         <Box className={classes.root}>
           <Description>
             - Latest stable versions of{' '}
-            <Link href='https://docs.npmjs.com/downloading-and-installing-node-js-and-npm'>
+            <a href='https://docs.npmjs.com/downloading-and-installing-node-js-and-npm'>
               Node.js and NPM
-            </Link>{' '}
+            </a>{' '}
             installed
           </Description>
         </Box>
         <Box className={classes.root}>
           <Description>
             - Latest stable versions of{' '}
-            <Link href='https://docs.docker.com/compose/install/'>
+            <a href='https://docs.docker.com/compose/install/'>
               docker-compose
-            </Link>{' '}
+            </a>{' '}
             installed
           </Description>
         </Box>
