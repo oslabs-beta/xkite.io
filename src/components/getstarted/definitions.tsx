@@ -138,7 +138,7 @@ export default function definitions() {
       <Step >Kafka-Connect (source / sink)</Step>
       </Box>
       <Box className={classes.root}>
-      <Description >Future instances of xkite shall provide the ability to connect a variety of data sources and sinks. The <Link color="#A3F6BF" href="https://hub.docker.com/r/xkite/kafka-connector">xkite/kafka-connect</Link> 
+      <Description >Future instances of xkite shall provide the ability to connect a variety of data sources and sinks. The <Link color="#A3F6BF" href="https://hub.docker.com/r/xkite/kafka-connector">xkite/kafka-connect </Link> 
       docker image was custom built for the xkite application based on the <Link color="#A3F6BF" href="https://hub.docker.com/r/confluentinc/cp-kafka-connect">confluentinc/cp-kafka-connect</Link> docker image. The key difference 
       between these images is simply the connector plugins provided. Below is a list of the plugins provided by xkite:
       </Description>
