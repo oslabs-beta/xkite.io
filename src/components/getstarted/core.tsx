@@ -1,6 +1,6 @@
 import TabPanel from '@mui/lab/TabPanel';
 import Image from 'next/image';
-import { Box, Typography, styled } from '@mui/material';
+import { Box, Typography, styled, Link } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import xkiteCore from 'public/xkite-core.gif';
 import { CopyBlock, atomOneDark } from 'react-code-blocks';
@@ -69,29 +69,17 @@ export default function core() {
           />
         </Code>
         <Box className={classes.root}>
-        <Description >README: <a href="https://github.com/oslabs-beta/xkite-core/blob/main/README.md">Github</a></Description>
+        <Description >README: <Link color="#A3F6BF" href="https://github.com/oslabs-beta/xkite-core/blob/main/README.md">Github</Link></Description>
         </Box>
         <Box className={classes.root}>
           <Step>System Requirements: </Step>
         </Box>
         <Box className={classes.root}>
-          <Description>
-            - Latest stable versions of{' '}
-            <a href='https://docs.npmjs.com/downloading-and-installing-node-js-and-npm'>
-              Node.js and NPM
-            </a>{' '}
-            installed
-          </Description>
-        </Box>
-        <Box className={classes.root}>
-          <Description>
-            - Latest stable versions of{' '}
-            <a href='https://docs.docker.com/compose/install/'>
-              docker-compose
-            </a>{' '}
-            installed
-          </Description>
-        </Box>
+      <Description >- Latest stable versions of <Link color="#A3F6BF" href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Node.js and NPM</Link> installed</Description>
+      </Box>
+      <Box className={classes.root}>
+      <Description >- Latest stable versions of <Link color="#A3F6BF" href="https://docs.docker.com/compose/install/">docker-compose</Link> installed</Description>
+      </Box>
         <Box className={classes.root}>
           <Description>
             - <strong>Note: </strong>You will need Docker daemon running before
