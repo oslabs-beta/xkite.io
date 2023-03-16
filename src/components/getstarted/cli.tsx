@@ -6,7 +6,7 @@ import {
   styled
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
-import xkiteCli from 'public/cli-xkite.gif'
+import xkiteCli from 'public/xkite-cli-2.gif'
 import { CopyBlock, atomOneDark } from 'react-code-blocks';
 
 
@@ -72,6 +72,9 @@ export default function cli() {
         />
       </Code>
       <Box className={classes.root}>
+      <Description >README: <a href="https://github.com/oslabs-beta/xkite-cli/blob/main/README.md">Github</a></Description>
+      </Box>
+      <Box className={classes.root}>
       <Step >System Requirements: </Step>
       </Box>
       <Box className={classes.root}>
@@ -79,9 +82,6 @@ export default function cli() {
       </Box>
       <Box className={classes.root}>
       <Description >- Latest stable versions of <a href="https://docs.docker.com/compose/install/">docker-compose</a> installed</Description>
-      </Box>
-      <Box className={classes.root}>
-      <Description >- <strong>Note: </strong>You will need Docker daemon running before deploying an xkite configuration.</Description>
       </Box>
       <Box className={classes.root}>
       <Step >Overview: </Step>
