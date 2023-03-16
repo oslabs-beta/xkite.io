@@ -6,7 +6,9 @@ import MuiLink, { LinkProps as MuiLinkProps } from '@mui/material/Link';
 import { styled } from '@mui/material/styles';
 
 // Add support for the sx prop for consistency with the other branches.
-const Anchor = styled('a')({});
+const Anchor = styled('a')(({ theme }) => 'color: #A3F6BF;');
+
+const ColoredMuiLink = styled(MuiLink)(({ theme }) => 'color: #A3F6BF;');
 
 interface NextLinkComposedProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>,
@@ -72,7 +74,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const router = useRouter();
   const pathname = typeof href === 'string' ? href : href.pathname;
   const className = clsx(classNameProps, {
-    [activeClassName]: router.pathname === pathname && activeClassName
+    [activeClassName]: router.pathname === pathname && activeClassName,
   });
 
   const isExternal =
@@ -84,7 +86,9 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       return <Anchor className={className} href={href} ref={ref} {...other} />;
     }
 
-    return <MuiLink className={className} href={href} ref={ref} {...other} />;
+    return (
+      <ColoredMuiLink className={className} href={href} ref={ref} {...other} />
+    );
   }
 
   const linkAs = linkAsProp || as;
@@ -95,7 +99,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     scroll,
     shallow,
     prefetch,
-    locale
+    locale,
   };
 
   if (noLinkStyle) {
