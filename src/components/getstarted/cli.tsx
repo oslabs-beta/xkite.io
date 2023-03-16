@@ -135,7 +135,7 @@ export default function cli() {
           theme={atomOneDark}
         />
       </Code>
-      <Image src={xkiteCli} alt="xkite-cli" />
+      <Image src={xkiteCli} alt="xkite-cli" unoptimized={true}/>
       <Box className={classes.root}>
       <Description >Please refer to the README for detailed instructions or refer to the xkite-cli –help command to see all available options.</Description>
       </Box>

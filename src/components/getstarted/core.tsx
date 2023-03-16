@@ -141,7 +141,7 @@ export default function core() {
             theme={atomOneDark}
           />
         </Code>
-        <Image src={xkiteCore} alt='xkite-cli' />
+        <Image src={xkiteCore} alt='xkite-cli' unoptimized={true}/>
         <Box className={classes.root}>
           <Description>
             After installation is completed, you&apos;re ready to begin using

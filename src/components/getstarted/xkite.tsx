@@ -200,7 +200,7 @@ export default function xkite() {
         may take several minutes.
       </Description>
       </Box>
-      <Image src={config} alt="kafka configuration" />
+      <Image src={config} alt="kafka configuration" unoptimized={true}/>
       <Box className={classes.root}>
       <Step >3. Monitoring Kafka Health</Step>
       </Box>
@@ -215,7 +215,7 @@ export default function xkite() {
         related to your producers, consumers, topics, and more.
       </Description>
       </Box>
-      <Image src={kafkaMetrics} alt="kafka metrics" />
+      <Image src={kafkaMetrics} alt="kafka metrics" unoptimized={true}/>
       <Box className={classes.root}>
       <Step >4. Monitoring Docker Health</Step>
       </Box>
@@ -226,7 +226,7 @@ export default function xkite() {
         in the top navigation.
       </Description>
       </Box>
-      <Image src={dockerMetrics} alt="docker metrics" />
+      <Image src={dockerMetrics} alt="docker metrics" unoptimized={true}/>
       <Box className={classes.root}>
       <Step >5. Testing Your Kafka Configuration</Step>
       </Box>
@@ -235,7 +235,7 @@ export default function xkite() {
         new topics and sending test messages to those topics, as well as querying your KSQL instance directly from the xkite interface. 
       </Description>
       </Box>
-      <Image src={testing} alt="kafka testing" />
+      <Image src={testing} alt="kafka testing" unoptimized={true}/>
       <Box className={classes.root}>
       <Description >If you have configured your xkite setup to include KSQL as your data source of choice, you will be presented with 
                   the option to create streams using the KSQL REST API. Here are the steps you must take:
@@ -273,7 +273,7 @@ export default function xkite() {
         </Code>
         </ol>
       </Description>
-      <Image src={stream} alt="ksql streams" />
+      <Image src={stream} alt="ksql streams" unoptimized={true}/>
       </Box>
       <Box className={classes.root}>
       <Step >6. Export Your Kafka Configuration & Wind Down Docker Images</Step>
@@ -286,7 +286,7 @@ export default function xkite() {
         delete any related Docker volumes you created during your session.
       </Description>
       </Box>
-      <Image src={disconnect} alt="disconnect" />
+      <Image src={disconnect} alt="disconnect" unoptimized={true}/>
     </Panel>
     </>
   );
