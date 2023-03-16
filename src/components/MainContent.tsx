@@ -76,7 +76,7 @@ export default function MainContent() {
               fontWeight='normal'
             >
               A comprehensive prototyping, testing, and monitoring toolset built
-              for Apache Kafka. Use xKite to bootstrap your next project, or
+              for Apache Kafka. Use xkite to bootstrap your next project, or
               install our library into an existing project. Built by (and for)
               developers.
             </TypographyH2>
