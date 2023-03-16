@@ -3,7 +3,8 @@ import Image from 'next/image'
 import {
   Box,
   Typography,
-  styled
+  styled,
+  Link
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 
@@ -58,17 +59,17 @@ export default function contribution() {
       </Description>
       </Box>
       <Box className={classes.root}>
-      <Description > <a href="https://github.com/oslabs-beta/xkite">xkite</a>: 
+      <Description > <Link color="#A3F6BF" href="https://github.com/oslabs-beta/xkite">xkite</Link>: 
       Our complete xkite repository for running xkite with our visual prototyping, testing, and monitoring interface.
       </Description>
       </Box>
       <Box className={classes.root}>
-      <Description > <a href="https://github.com/oslabs-beta/xkite-core">xkite-core</a>:
+      <Description > <Link color="#A3F6BF" href="https://github.com/oslabs-beta/xkite-core">xkite-core</Link>:
       Our library for installing xkite into an existing codebase. Please refer to the `xkite-core` tab for more information.
       </Description>
       </Box>
       <Box className={classes.root}>
-      <Description > <a href="https://github.com/oslabs-beta/xkite-cli">xkite-cli</a>:
+      <Description > <Link color="#A3F6BF" href="https://github.com/oslabs-beta/xkite-cli">xkite-cli</Link>:
       Create an xkite instance directly from the command line without the entire xkite package. Please refer to the `xkite-cli` tab for directions.
       </Description>
       </Box>
