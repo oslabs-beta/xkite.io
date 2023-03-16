@@ -64,7 +64,7 @@ export default function MainContent() {
           <Grid item md={10} lg={8} mx='auto'>
             <LabelWrapper color='success'>Version 1.0.0</LabelWrapper>
             <Box>
-              <Image alt='logo' height={600} width={600} src='/xkite-logo-with-text.png' />
+              <Image alt='logo' height={600} width={600} src='/xkite-transparent.png' />
             </Box>
             <TypographyH12 sx={{ mb: 2 }} variant='h1'>
               Kafka Integrated Testing Environment

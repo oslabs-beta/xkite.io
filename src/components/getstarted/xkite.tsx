@@ -11,6 +11,7 @@ import kafkaMetrics from 'public/kafka-metrics.gif'
 import dockerMetrics from 'public/docker-metrics.gif'
 import disconnect from 'public/export-disconnect.gif'
 import testing from 'public/testing.gif'
+import stream from 'public/KSQL_Stream.gif'
 
 import { CopyBlock, atomOneDark } from 'react-code-blocks';
 
@@ -106,7 +107,7 @@ export default function xkite() {
       </Box>
       <Code className={classes.root}>
         <CopyBlock
-          text={`npx @xkiteio/create-xkite my-xkite`}
+          text={`npx create-xkite <directory-name>`}
           language='javascript'
           showLineNumbers={true}
           wrapLines
@@ -232,6 +233,45 @@ export default function xkite() {
       </Description>
       </Box>
       <Image src={testing} alt="kafka testing" />
+      <Box className={classes.root}>
+      <Description >If you have configured your xkite setup to include KSQL as your data source of choice, you will be presented with 
+                  the option to create streams using the KSQL REST API. Here are the steps you must take:
+      </Description>
+      </Box>
+      <Box className={classes.root}>
+      <Description >
+        <ol>
+          <li>Open up Docker dashboard into the `Containers` tab, and navigate to the ksql_cli image</li>
+          <li>Open up the ksql_cli terminal, and enter the following to create the users table with some preconfigured entries:</li>
+          <Code className={classes.root}>
+        <CopyBlock
+          text={`$ ksql http://8088 <<EOF
+  > RUN SCRIPT /tmp/test.sql;
+  > exit
+  > EOF`}
+          language='javascript'
+          showLineNumbers={true}
+          wrapLines
+          codeBlock
+          theme={atomOneDark}
+        />
+        </Code>
+        <li>Navigate back to the xkite test page within the `KSQL Streams` tab</li>
+        <li>Simply enter commands into the SQL Query field - here&apos;s an example:</li>
+        <Code className={classes.root}>
+        <CopyBlock
+          text={`SELECT * FROM users EMIT CHANGES;`}
+          language='javascript'
+          showLineNumbers={true}
+          wrapLines
+          codeBlock
+          theme={atomOneDark}
+        />
+        </Code>
+        </ol>
+      </Description>
+      <Image src={stream} alt="ksql streams" />
+      </Box>
       <Box className={classes.root}>
       <Step >6. Export Your Kafka Configuration & Wind Down Docker Images</Step>
       </Box>
