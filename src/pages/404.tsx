@@ -29,7 +29,7 @@ export default function Status404() {
       <MainContent sx={{ mt: 5 }}>
         <Container maxWidth='md'>
           <Box textAlign='center'>
-            <Image alt='404' height={180} width={180} src='/404.svg' />
+            <Image alt='404' height={180} width={180} src='/404.svg' unoptimized={true}/>
             <Typography variant='h2' sx={{ my: 2 }}>
               The page you were looking for doesn&apos;t exist.
             </Typography>
