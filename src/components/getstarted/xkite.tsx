@@ -80,6 +80,9 @@ export default function xkite() {
         />
       </Code>
       <Box className={classes.root}>
+      <Description >README: <a href="https://github.com/oslabs-beta/xkite/blob/main/README.md">Github</a></Description>
+      </Box>
+      <Box className={classes.root}>
       <Step >System Requirements: </Step>
       </Box>
       <Box className={classes.root}>

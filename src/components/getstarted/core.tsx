@@ -69,6 +69,9 @@ export default function core() {
           />
         </Code>
         <Box className={classes.root}>
+        <Description >README: <a href="https://github.com/oslabs-beta/xkite-core/blob/main/README.md">Github</a></Description>
+        </Box>
+        <Box className={classes.root}>
           <Step>System Requirements: </Step>
         </Box>
         <Box className={classes.root}>
