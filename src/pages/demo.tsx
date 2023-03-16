@@ -43,7 +43,7 @@ export default function Demo() {
           container
         >
           <Box>
-            <Logo alt='logo' height={400} width={400} src='/bigLogo.png' />
+            <Logo alt='logo' height={400} width={400} src='/xkite-logo-with-text.png' />
           </Box>
           <ComingSoon sx={{ mb: 2 }} variant='h1'>
             &apos;Demo&apos; Page <br /> Coming Soon!
