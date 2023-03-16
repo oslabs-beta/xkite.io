@@ -28,27 +28,41 @@ const useStyles = makeStyles({
 
 const Tabs = styled(TabList)(
   ({ theme }) => `
-    width: 100;
-    display: flex;
-    align-items: space-between;
+  width: 100%;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  .css-1pyy021-MuiTabs-flexContainer{
     justify-content: space-between;
-    @media (max-width: 600px) {
-      .MuiTab-root {
-        font-size: small;
-      }
+    align-items: space-between;
+  }
+  .MuiTab-root {
+    width: auto;
+    text-transform: lowercase;
+    font-size: small;
+  }
+  flex-wrap: wrap;
+  overflow-x: auto;
+  position: sticky;
+  left: 0;
+  @media (max-width: 600px) {
+    .MuiTab-root {
+      font-size: small;
     }
-    @media (min-width: 601px) and (max-width: 960px) {
-      .MuiTab-root {
-        font-size: medium;
-      }
+  }
+  @media (min-width: 601px) and (max-width: 960px) {
+    .MuiTab-root {
+      font-size: medium;
     }
-    @media (min-width: 961px) {
-      .MuiTab-root {
-        font-size: large;
-      }
+  }
+  @media (min-width: 961px) {
+    .MuiTab-root {
+      font-size: large;
     }
+  }
 `
 );
+
 export default function GetStarted() {
   const [value, setValue] = React.useState('xkite');
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -74,51 +88,73 @@ export default function GetStarted() {
           </ComingSoon>
           <Grid item xs={12}>
             <Box className={classes.root}></Box>
-            </Grid>
-            <Grid item xs={12}>
-            <Box sx={{ width: '100%' }}>
+          </Grid>
+          <Grid item xs={12}>
+            <Box sx={{ width: '100%', overflowX: 'auto' }}>
               <TabContext value={value}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                  <Tabs onChange={handleChange} sx={{ width: '100%', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+                <Box>
+                  <Tabs
+                    onChange={handleChange}
+                    variant='scrollable'
+                    scrollButtons='auto'
+                    sx={{
+                      flexWrap: 'wrap',
+                      width: '100%',
+                      justifyContent: 'space-between',
+                    }}
+                  >
                     <Tab
                       label='xkite'
                       value='xkite'
                       sx={{
-                        width: '20%',
                         flexWrap: 'wrap',
                         textTransform: 'lowercase',
                         fontSize: 'small',
+                        overflowWrap: 'break-word',
+                        wordBreak: 'break-word',
                       }}
                     />
                     <Tab
                       label='xkite-core'
                       value='core'
                       sx={{
-                        width: '20%',
                         flexWrap: 'wrap',
                         textTransform: 'lowercase',
                         fontSize: 'small',
+                        overflowWrap: 'break-word',
+                        wordBreak: 'break-word',
                       }}
                     />
                     <Tab
                       label='xkite-cli'
                       value='cli'
                       sx={{
-                        width: '20%',
                         flexWrap: 'wrap',
                         textTransform: 'lowercase',
                         fontSize: 'small',
+                        overflowWrap: 'break-word',
+                        wordBreak: 'break-word',
                       }}
                     />
                     <Tab
                       label='Contributions'
                       value='contributions'
-                      sx={{ width: '20%', flexWrap: 'wrap', fontSize: 'small' }}
+                      sx={{
+                        flexWrap: 'wrap',
+                        fontSize: 'small',
+                        overflowWrap: 'break-word',
+                        wordBreak: 'break-word',
+                      }}
                     />
                     <Tab
                       label='Definitions'
                       value='definitions'
-                      sx={{ width: '20%', flexWrap: 'wrap', fontSize: 'small' }}
+                      sx={{
+                        flexWrap: 'wrap',
+                        fontSize: 'small',
+                        overflowWrap: 'break-word',
+                        wordBreak: 'break-word',
+                      }}
                     />
                   </Tabs>
                 </Box>
@@ -129,7 +165,7 @@ export default function GetStarted() {
                 <Definitions />
               </TabContext>
             </Box>
-            </Grid>
+          </Grid>
         </Grid>
         <Container maxWidth='lg' sx={{ mt: 8 }}></Container>
       </Container>
