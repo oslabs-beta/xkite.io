@@ -77,7 +77,7 @@ export default function MainContent() {
             >
               A comprehensive prototyping, testing, and monitoring toolset built
               for Apache Kafka. Use xkite to bootstrap your next project, or
-              install our library into an existing project. Built by (and for)
+              install our library into an existing project. Built by developers, for
               developers.
             </TypographyH2>
             <Button
