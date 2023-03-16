@@ -52,6 +52,7 @@ export default function Developer(props: {
             rel='noreferrer'
           >
             <Image
+              unoptimized={true}
               src='/navbar/github.svg'
               alt='github'
               width={32}
@@ -64,6 +65,7 @@ export default function Developer(props: {
             rel='noreferrer'
           >
             <Image
+              unoptimized={true}
               src='/navbar/linkedin.svg'
               alt='linkedin'
               width={32}

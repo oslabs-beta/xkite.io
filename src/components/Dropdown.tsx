@@ -65,6 +65,7 @@ export default function SimpleListMenu({ theTeam }: any): any {
           rel='noreferrer'
         >
           <Image
+            unoptimized={true}
             src='/navbar/github.svg'
             alt='github'
             height={30}
@@ -76,7 +77,7 @@ export default function SimpleListMenu({ theTeam }: any): any {
           target='_blank'
           rel='noreferrer'
         >
-          <Image src='/navbar/npm.svg' alt='npm' height={30} width={30}></Image>
+          <Image src='/navbar/npm.svg' alt='npm' unoptimized={true} height={30} width={30}></Image>
         </Button>
         <Button
           href='https://linkedin.com/company/xkite-io'
@@ -84,6 +85,7 @@ export default function SimpleListMenu({ theTeam }: any): any {
           rel='noreferrer'
         >
           <Image
+            unoptimized={true}
             src='/navbar/linkedin.svg'
             alt='linkedin'
             height={30}

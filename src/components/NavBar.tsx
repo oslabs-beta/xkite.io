@@ -47,7 +47,7 @@ export default function NavBar({ theTeam }: any) {
     <NavBarWrapper>
       <Container maxWidth='lg'>
         <Box display='flex' alignItems='center'>
-          <Image src='/navbar/logo.png' height={40} width={50} alt='logo' onClick={() => window.location.href = '/'}/>
+          <Image unoptimized={true} src='/navbar/logo.png' height={40} width={50} alt='logo' onClick={() => window.location.href = '/'}/>
           <Box
             display='flex'
             alignItems='center'
@@ -88,6 +88,7 @@ export default function NavBar({ theTeam }: any) {
                     rel='noreferrer'
                   >
                     <Image
+                      unoptimized={true}
                       src='/navbar/github.svg'
                       alt='github'
                       height={40}
@@ -100,6 +101,7 @@ export default function NavBar({ theTeam }: any) {
                     rel='noreferrer'
                   >
                     <Image
+                      unoptimized={true}
                       src='/navbar/npm.svg'
                       alt='npm'
                       height={40}
@@ -112,6 +114,7 @@ export default function NavBar({ theTeam }: any) {
                     rel='noreferrer'
                   >
                     <Image
+                      unoptimized={true}
                       src='/navbar/linkedin.svg'
                       alt='linkedin'
                       height={40}
