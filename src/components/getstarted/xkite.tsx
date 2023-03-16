@@ -3,7 +3,8 @@ import Image from 'next/image'
 import {
   Box,
   Typography,
-  styled
+  styled, 
+  Link
 } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import config from 'public/home-configuration.gif'
@@ -80,16 +81,16 @@ export default function xkite() {
         />
       </Code>
       <Box className={classes.root}>
-      <Description >README: <a href="https://github.com/oslabs-beta/xkite/blob/main/README.md">Github</a></Description>
+      <Description >README: <Link color="#A3F6BF" href="https://github.com/oslabs-beta/xkite/blob/main/README.md">Github</Link></Description>
       </Box>
       <Box className={classes.root}>
       <Step >System Requirements: </Step>
       </Box>
       <Box className={classes.root}>
-      <Description >- Latest stable versions of <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Node.js and NPM</a> installed</Description>
+      <Description >- Latest stable versions of <Link color="#A3F6BF" href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Node.js and NPM</Link> installed</Description>
       </Box>
       <Box className={classes.root}>
-      <Description >- Latest stable versions of <a href="https://docs.docker.com/compose/install/">docker-compose</a> installed</Description>
+      <Description >- Latest stable versions of <Link color="#A3F6BF" href="https://docs.docker.com/compose/install/">docker-compose</Link> installed</Description>
       </Box>
       <Box className={classes.root}>
       <Description >- <strong>Note: </strong>You will need Docker daemon running before deploying an xkite configuration.</Description>
